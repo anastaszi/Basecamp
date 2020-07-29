@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2020_07_23_020916) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 2020_07_23_020916) do
 
   create_table "messages", force: :cascade do |t|
     t.text "text"
-    t.integer "topic_id", null: false
+    t.bigint "topic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "author"
     t.index ["topic_id"], name: "index_messages_on_topic_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_020916) do
   create_table "subtasks", force: :cascade do |t|
     t.string "title"
     t.boolean "completed", default: false
-    t.integer "task_id", null: false
+    t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["task_id"], name: "index_subtasks_on_task_id"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_020916) do
   create_table "tasks", force: :cascade do |t|
     t.string "title"
     t.boolean "completed"
-    t.integer "project_id", null: false
+    t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "last_edit"
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_020916) do
   create_table "topics", force: :cascade do |t|
     t.string "title"
     t.string "author"
-    t.integer "project_id", null: false
+    t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_topics_on_project_id"
