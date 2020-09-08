@@ -1,3 +1,3 @@
 # README
 
-Deployed add: https://gentle-harbor-88711.herokuapp.com/
+Deployed app: https://gentle-harbor-88711.herokuapp.com/
