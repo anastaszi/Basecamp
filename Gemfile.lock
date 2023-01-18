@@ -6,7 +6,7 @@ GEM
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
     actionmailbox (6.0.3.1)
-      actionpack (>= 6.0.3.2)
+      actionpack (= 6.0.3.1)
       activejob (= 6.0.3.1)
       activerecord (= 6.0.3.1)
       activestorage (= 6.0.3.1)
@@ -133,7 +133,7 @@ GEM
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
-    rack (2.2.3)
+    rack (2.2.6.2)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
